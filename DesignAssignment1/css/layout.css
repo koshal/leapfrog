@@ -32,7 +32,11 @@
 /* Body Part */
 
 .main-wrapper {
-	padding: 56px 0;
+	padding: 25px 0;
+}
+
+.main-top {
+	padding: 25px 0
 }
 
 .main-paragraph {
@@ -40,7 +44,7 @@
 }
 
 .col-3-main {
-	padding: 20px 0;
+	padding: 25px 0;
 }
 
 .col-3-left {
@@ -58,9 +62,41 @@
 	width: 640px;
 }
 
+.col-mid-status {
+	float: left;
+	padding: 20px 18px;
+}
+
+.col-mid-status ul li {
+	float: left;
+	width: 120px;
+	padding: 0 12px;
+	text-align: center;
+	font-weight: bold;
+}
+
 .col-2-right {
 	float: right;
 	width: 270px;
+}
+
+.col-2-right-paragraph {
+	line-height: 18px;
+	padding-top: 26px;
+}
+
+.col-2-right-paragraph P {
+	background: url(../images/col2rightbg.png);
+	padding: 20px;
+}
+
+.thoughts img {
+	float: left;
+}
+
+.johndoe {
+	float: right;
+	padding: 16px;
 }
 
 /*Footer Part*/
@@ -71,6 +107,20 @@
 .footer-col-4-left {
 	float: left;
 	width: 390px;
+}
+
+.footer-col-4-left .logo {
+	float: left;
+	padding: 0;
+}
+
+.footer-col-4-left-paragraph {
+	float: left;
+	padding: 28px 35px 28px 0;
+}
+
+.footer-col-4-left-contact {
+	float: left;
 }
 
 .footer-col-4-right {
@@ -98,12 +148,24 @@
 	width: 390px;
 }
 
+.blog-img {
+	float: left;
+	width: 65px;
+}
+
+.blog-detail {
+	float: right;
+	width: 325px;
+}
+
+
 .footer-bottom {
 	background: #6bb4ad;
 }
 
 .footer-bottom-left {
 	float: left;
+	line-height: 50px;
 }
 
 .footer-bottom-right {
