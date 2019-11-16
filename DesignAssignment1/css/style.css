@@ -1,0 +1,39 @@
+/*
+    header-top-nav-bg-color: #76C7C1;
+    header-top-nav-hover-color: #63a19e;
+    header-top-nav-hover-bottom-color: #528a87;
+    header-bottom-bg-color: #ececec;
+    header-bottom-text-color: #838d8e;
+    red-on-hover: #e9645b;
+    red-on-hover-bottom: #e35151;
+    footer-bottom-bg-color: #6bb4ad;
+    footer-top-bg-color: #76c7c1;
+    
+*/
+
+.nav-menu ul li {
+    font-size: 14px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.page-title {
+    color: #838d8e;
+}
+
+.breadcrumb ul li {
+    color: #838d8e;
+    font-size: 14px;
+}
+
+.breadcrumb ul li+li:before {
+    padding: 20px;
+    content: "/\00a0";
+}
+
+.main-wrapper {
+    background: white;
+}
