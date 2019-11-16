@@ -10,23 +10,31 @@
     footer-top-bg-color: #76c7c1;
     
 */
+.nav-menu {}
 
 .nav-menu ul li {
     font-size: 14px;
+    padding: 0px 20px;
+    line-height: 80px;
 }
 
 .nav-menu ul li a {
-    text-decoration: none;
     color: #fff;
+}
+
+.header-bottom {
+    background: #ececec;
 }
 
 .page-title {
     color: #838d8e;
+    line-height: 80px;
 }
 
 .breadcrumb ul li {
     color: #838d8e;
     font-size: 14px;
+    line-height: 80px;
 }
 
 .breadcrumb ul li+li:before {
@@ -34,6 +42,9 @@
     content: "/\00a0";
 }
 
+
+
+
 .main-wrapper {
-    background: white;
+    background: #f3f3f3;
 }
