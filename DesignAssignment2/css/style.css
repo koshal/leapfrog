@@ -136,8 +136,29 @@ input[type=checkbox]:checked~#menu {
     height: 520px;
     padding-bottom: 40%;
     background: #fff;
-    background: #000;
-    border: solid 10px #2c2c2c;
+    border-radius: 5px;
+    box-shadow: 0 3px lightgray;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border-radius: 0 5px 5px 0;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-radius: 5px 0 0 5px;
+}
+
+.left,
+.right {
+    background: #e9645b;
+    padding: 10px;
+    box-shadow: 0 2px #e4514a;
 }
 
 
