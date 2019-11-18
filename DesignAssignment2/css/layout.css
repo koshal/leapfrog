@@ -1,0 +1,159 @@
+.container {
+    max-width: 73.75rem;
+    margin: 0 auto;
+}
+
+.logo {
+    float: left;
+    padding: 18px 0;
+}
+
+.nav-menu {
+    float: right;
+    padding: 14px 0;
+}
+
+.nav-menu ul li {
+    float: left;
+}
+
+.page-title {
+    float: left;
+}
+
+.breadcrumb {
+    float: right;
+}
+
+
+
+/* Headlines */
+.article2 {
+    float: left;
+    width: 50%;
+}
+
+.article4 {
+    float: left;
+    width: 75%;
+}
+
+.article5 {
+    float: right;
+    width: 25%;
+}
+
+.article6 {
+    float: left;
+    width: 25%;
+}
+
+.article7-9 {
+    float: right;
+    width: 75%;
+}
+
+.article7 {
+    float: left;
+    width: 33.33%;
+}
+
+.article8-9 {
+    float: right;
+    width: 66.66%;
+}
+
+.article8 {
+    float: left;
+    width: 50%;
+}
+
+.article9 {
+    float: right;
+    width: 50%;
+}
+
+.article {
+    padding: 10px;
+}
+
+
+
+
+
+/*Footer Part*/
+.footer-top {
+    background: url(../images/bottom-repeat.png) repeat-x #76c7c1;
+}
+
+.footer-col-4-left {
+    float: left;
+    width: 390px;
+}
+
+.footer-col-4-left .logo {
+    float: left;
+    padding: 0;
+}
+
+.footer-col-4-left-paragraph {
+    float: left;
+    padding: 28px 35px 28px 0;
+}
+
+.footer-col-4-left-contact {
+    float: left;
+}
+
+.footer-col-4-right {
+    float: right;
+    width: 790px;
+}
+
+.footer-col-3-left {
+    float: left;
+    width: 200px;
+}
+
+.footer-col-3-right {
+    float: right;
+    width: 590px;
+}
+
+.footer-col-2-left {
+    float: left;
+    width: 200px;
+}
+
+.footer-col-2-right {
+    float: right;
+    width: 390px;
+}
+
+.blog-img {
+    float: left;
+    width: 65px;
+}
+
+.blog-detail {
+    float: right;
+    width: 325px;
+}
+
+
+.footer-bottom {
+    background: #6bb4ad;
+}
+
+.footer-bottom-left {
+    float: left;
+    line-height: 50px;
+}
+
+.footer-bottom-right {
+    float: right;
+}
+
+.footer-bottom-right li {
+    float: left;
+}
