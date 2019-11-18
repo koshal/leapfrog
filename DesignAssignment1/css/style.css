@@ -180,6 +180,22 @@
     padding: 0 100px;
 }
 
+
+
+.ourclients {
+    padding: 20px 0;
+}
+
+.happy {
+    color: #838d8e;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ourclients-dot img {
+    padding-bottom: 10px;
+}
+
 /*Technologies*/
 .technologies {
     padding: 20px 0

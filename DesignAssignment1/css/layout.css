@@ -99,6 +99,40 @@
 	padding: 16px;
 }
 
+.happy {
+	float: left;
+	width: 150px;
+}
+
+.right-midline {
+	float: right;
+	width: 1070px;
+}
+
+.midline {
+	float: left;
+	background: url(../images/ourclientsdash.png) repeat-x;
+}
+
+.our-client-arrows {
+	float: right;
+	width: 110px;
+}
+
+.happy-clients-left-arrow {
+	float: left;
+	width: 50px;
+}
+
+.happy-clients-right-arrow {
+	float: right;
+	width: 50px;
+}
+
+
+
+
+
 /*Footer Part*/
 .footer-top {
 	background: url(../images/bottom-repeat.png) repeat-x #76c7c1;

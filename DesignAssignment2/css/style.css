@@ -224,11 +224,6 @@ input[type=checkbox]:checked~#menu {
     line-height: 40px;
 }
 
-.button-style:hover {
-    background: #e9645b;
-    box-shadow: 0 3px #e4514a;
-}
-
 .card-style {
     text-align: center;
     padding: 20px;
@@ -250,6 +245,11 @@ input[type=checkbox]:checked~#menu {
 
 .card-style:hover {
     background: white;
+}
+
+.card-style:hover .button-style {
+    background: #e9645b;
+    box-shadow: 0 3px #e4514a;
 }
 
 /*Headlines*/
