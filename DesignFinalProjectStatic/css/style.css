@@ -1,23 +1,182 @@
 .container {
-    width: 1200px;
+    max-width: 75em;
     margin: 0 auto;
 }
 
+/*================  Home Section =================*/
 .home-cover {
-    width: 100%;
-    height: 62.5rem;
     background: url(../images/home-bg.png) center;
 }
 
 .home-bg-overlay {
-    width: 100%;
-    height: 62.5rem;
     background: url(../images/home-bg-overlay.png);
 }
 
 .logo {
     color: white;
     font-weight: bold;
+    font-size: 30px;
+    line-height: 80px;
+}
+
+nav ul li a:hover {
+    color: #fce38a;
+    border-bottom: 2px #fce38a solid;
+    margin-bottom: -2px;
+}
+
+.home-content {
+    text-align: center;
+}
+
+.dash {
+    background: white;
+    height: 3px;
+    width: 60px;
+    margin: 30px auto;
+}
+
+.home-content {
+    padding: 125px;
+}
+
+.top-title {
+    font-family: 'Kaushan Script', serif;
+    font-size: 4.5em;
+    color: white;
+}
+
+.main-text {
+    font-size: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    line-height: 150px;
+    padding: 25px 0;
+}
+
+.home-btn {
+    padding: 20px;
+}
+
+.home-btn button {
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: bold;
+    background: none;
+    border: 3px white solid;
+    padding: 0 30px;
+    color: white;
+}
+
+.home-bottom-nav ul li {
+    line-height: 70px;
+    color: #f7eac4;
+    border-top: 3px solid #f7eac4;
     font-size: 18px;
-    line-height: 60px;
+    margin-right: 30px;
+    margin-bottom: -3px;
+    width: 280px;
+}
+
+.home-bottom-nav ul li:last-child {
+    margin-right: -30px;
+}
+
+.home-bottom-nav ul li:active {
+    border-top-color: white;
+    color: white;
+}
+
+.home-bottom-nav ul li a {
+    display: block;
+}
+
+.home-bottom-nav ul li span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*============= About Us ============*/
+.about {
+    background: #fff;
+}
+
+.about .container,
+.work-part .container,
+.devices-part .container,
+.service-part .container,
+.our-team .container,
+.our-work .container,
+.clients .container,
+.our-stories .container {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.secondary-title {
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 1.5em;
+    line-height: 50px;
+}
+
+.primary-title {
+    font-size: 1.875em;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.about .dash,
+.work-part .dash,
+.devices-part .dash,
+.service-part .dash,
+.our-team .dash,
+.our-work .dash,
+.clients .dash,
+.our-stories .dash {
+    background: #f38181;
+}
+
+.section-paragraph {
+    padding: 20px 100px;
+    font-size: 0.9375em;
+}
+
+.about-img {
+    width: 380px;
+    height: 250px;
+    margin: 20px 30px 20px 0;
+}
+
+.about-gallery div:last-child {
+    margin-right: -30px;
+}
+
+.about-img:hover {}
+
+
+
+/*=========== Stat Section  ==========*/
+.stat {
+    background: #95e1d3;
+}
+
+.stat ul li {
+    float: left;
+    color: white;
+    text-align: center;
+    border-left: 1px solid #b5eae0;
+    display: block;
+    padding: 90px 0;
+    width: 238px;
+}
+
+.stat ul li:last-child {
+    border-right: 1px solid #b5eae0;
+}
+
+.stat ul li div {
+    font-size: 72px;
+    font-weight: bold;
+    padding-bottom: 10px;
 }
