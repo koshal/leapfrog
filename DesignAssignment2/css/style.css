@@ -230,7 +230,7 @@ input[type=checkbox]:checked~#menu {
     }
 
     .button-style {
-        width: 88%;
+        width: 89%;
     }
 }
 
@@ -241,7 +241,7 @@ input[type=checkbox]:checked~#menu {
     }
 
     .button-style {
-        width: 88%;
+        width: 89%;
     }
 
 }
@@ -389,6 +389,11 @@ input[type=checkbox]:checked~#menu {
     }
 
     .breadcrumb {
+        display: none;
+    }
+
+    .left,
+    .right {
         display: none;
     }
 

@@ -1,0 +1,11 @@
+.logo {
+    float: left;
+}
+
+.nav-menu {
+    float: right;
+}
+
+.nav-menu ul li {
+    float: left;
+}
