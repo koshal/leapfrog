@@ -1,11 +1,98 @@
+/*=========  Home Section ========*/
 .logo {
     float: left;
 }
 
-.nav-menu {
+nav {
     float: right;
 }
 
-.nav-menu ul li {
+nav ul li {
     float: left;
+    padding: 0 25px;
+    font-size: 0.875em;
+}
+
+nav ul li a {
+    line-height: 80px;
+    padding-bottom: 10 px;
+}
+
+.home-bottom-nav ul li {
+    float: left;
+    width: 20%;
+}
+
+
+/* About Us Page */
+.image-holder {
+    float: left;
+}
+
+/*=========What we do part ===========*/
+.service-img {
+    float: left;
+    width: 50%;
+}
+
+.service-collapsible {
+    float: right;
+    width: 50%;
+}
+
+/*========= Testimonials ===========*/
+
+
+/*=========  Gallery Part ===========*/
+.left-gallery {
+    float: left;
+    width: 50%;
+}
+
+.right-gallery {
+    float: left;
+    width: 50%;
+}
+
+.left-left-gallery {
+    float: left;
+    width: 50%;
+}
+
+.left-right-gallery {
+    float: left;
+    width: 50%;
+}
+
+.right-left-gallery {
+    float: left;
+    width: 50%;
+}
+
+.right-right-gallery {
+    float: right;
+    width: 50%;
+}
+
+/*======== Footer ========*/
+
+.footer-left {
+    float: left;
+    width: 39.555555%;
+    text-align: left;
+}
+
+.footer-content {
+    float: left;
+    width: 27.302999%;
+}
+
+.blog-img {
+    float: left;
+    width: 20%;
+}
+
+.blog-detail {
+    float: right;
+    width: 65%;
 }

@@ -1,0 +1,764 @@
+.container {
+    max-width: 75em;
+    margin: 0 auto;
+}
+
+/*================  Home Section =================*/
+.home-cover {
+    background: url(../images/home-bg.png) center;
+}
+
+.home-bg-overlay {
+    background: url(../images/home-bg-overlay.png);
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.875em;
+    line-height: 80px;
+}
+
+nav ul li a:hover {
+    color: #fce38a;
+    border-bottom: 2px #fce38a solid;
+    margin-bottom: -2px;
+}
+
+.home-content {
+    text-align: center;
+}
+
+.dash {
+    background: white;
+    height: 3px;
+    width: 60px;
+    margin: 30px auto;
+}
+
+.home-content {
+    padding: 125px;
+}
+
+.top-title {
+    font-family: 'Kaushan Script', serif;
+    font-size: 4.5em;
+    color: white;
+}
+
+.main-text {
+    font-size: 9.375em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    line-height: 150px;
+    padding: 25px 0;
+}
+
+.home-btn {
+    padding: 20px;
+    width: 165px;
+    margin: 0 auto;
+}
+
+.home-btn .learn-btn {
+    line-height: 34px;
+    font-size: 0.875em;
+    font-weight: bold;
+    background: none;
+    border: 3px white solid;
+    padding: 0 30px;
+    color: white;
+}
+
+.home-btn .learn-btn:hover {
+    color: #f38181;
+    border: 3px #f38181 solid;
+}
+
+.home-bottom-nav ul li {
+    line-height: 70px;
+    color: #f7eac4;
+    border-top: 3px solid #f7eac4;
+    font-size: 1.125em;
+    margin-right: 30px;
+    margin-bottom: -3px;
+    width: 280px;
+}
+
+.home-bottom-nav ul li:last-child {
+    margin-right: -30px;
+}
+
+.home-bottom-nav ul li:active {
+    border-top-color: white;
+    color: white;
+}
+
+.home-bottom-nav ul li a {
+    display: block;
+}
+
+.home-bottom-nav ul li span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*============= About Us ============*/
+.about {
+    background: #fff;
+}
+
+.about .container,
+.work-part .container,
+.service-part .container,
+.our-team .container,
+.our-work .container,
+.clients .container,
+.our-stories .container {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.secondary-title {
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 1.5em;
+    line-height: 50px;
+}
+
+.primary-title {
+    font-size: 1.875em;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.dash-red {
+    background: #f38181;
+    height: 3px;
+    width: 60px;
+    margin: 30px auto;
+}
+
+.section-paragraph {
+    padding: 20px 100px;
+    font-size: 0.9375em;
+}
+
+
+.image-holder {
+    width: 380px;
+    height: 250px;
+    margin: 20px 30px 20px 0;
+    background: #95e1d3;
+    position: relative;
+}
+
+.about-gallery div:last-child {
+    margin-right: 0;
+}
+
+.img-overlay {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    height: 100%;
+    width: 100%;
+    opacity: .9;
+    background: linear-gradient(#f38181, #fce38a);
+    z-index: 19;
+    display: none;
+
+}
+
+.img-overlay .in-icon {
+    position: absolute;
+    top: 38%;
+    left: 36%;
+}
+
+.in-icon div {
+    font-weight: bold;
+    color: white;
+}
+
+.image-holder:hover .img-overlay {
+    display: block;
+}
+
+.image-holder:hover img {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.image-holder:hover .img-overlay .in-icon {
+    position: absolute;
+    top: 38%;
+    left: 36%;
+}
+
+/*=========== Stat Section  ==========*/
+.stat {
+    background: #95e1d3;
+}
+
+.stat ul li {
+    float: left;
+    color: white;
+    text-align: center;
+    border-left: 1px solid #b5eae0;
+    display: block;
+    padding: 90px 0;
+    width: 238px;
+}
+
+.stat ul li:last-child {
+    border-right: 1px solid #b5eae0;
+}
+
+.stat ul li div {
+    font-size: 4.5em;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+/*========= Work/Services Part =========*/
+.work-row {
+    padding: 30px 0;
+}
+
+.work-cols {
+    width: 33.33333333%;
+    float: left;
+}
+
+.service-type figure {
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+.service-type-info {
+    width: 290px;
+    float: left;
+    text-align: left;
+    margin-left: 28px;
+}
+
+.service-type-title {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/*========= Devices Part ==========*/
+.devices-part {
+    background: url(../images/Layer_45.png);
+}
+
+.devices-part .container {
+    padding-top: 90px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.ipad {
+    position: relative;
+
+}
+
+.iphone {
+    position: absolute;
+    bottom: -10%;
+    right: 22.5%;
+}
+
+/*=========What we do part ===========*/
+.our-service {
+    padding: 20px 0;
+}
+
+.service-img {
+    float: left;
+    width: 49%;
+    margin-right: 20px;
+}
+
+.service-collapsible {
+    float: left;
+    width: 49%;
+    border: 1px solid #e5e5e5;
+}
+
+.collapsible-header {
+    height: 58px;
+    padding: 15px;
+    cursor: pointer;
+    width: 50%;
+
+}
+
+.collapsible-title {
+    float: left;
+}
+
+.collapsible-state {
+    float: right;
+}
+
+/*=========  Testimonials ============*/
+.testimonials {
+    background: #f8f8f8;
+}
+
+.testimonials .container {
+    padding: 70px 0;
+    position: relative;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 46%;
+    left: 1%;
+    cursor: pointer;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 46%;
+    right: 1%;
+    cursor: pointer;
+}
+
+.testimonial-container {
+    padding: 0 100px;
+}
+
+.testimonial-icon {
+    float: left;
+    width: 6%;
+    border: 3px #95e1d3 solid;
+    padding: 40px;
+}
+
+.quote {
+    float: right;
+    width: 80%;
+}
+
+.quote-text {
+    font-size: 1.375em;
+    font-style: italic;
+    line-height: 32px;
+    color: #777;
+    letter-spacing: -1px;
+}
+
+.testimonial-quote span {
+    font-size: 1.5em;
+    font-family: 'Kaushan Script', cursive;
+    line-height: 44px;
+}
+
+.testimonial-quote .dash-red {
+    margin: 30px 0;
+}
+
+/*======= Our Team Part ===========*/
+.our-team .image-holder {
+    width: 380px;
+    height: 470px;
+    margin: 20px 30px 20px 0;
+    background: #95e1d3;
+    position: relative;
+}
+
+.team-social-icons .social-icons {
+    float: left;
+    display: block;
+}
+
+/*=========  Gallery Part ===========*/
+.portfolio-gallery img {
+    width: 100%;
+    height: auto;
+}
+
+/*==========  Testimonials2 ==============*/
+.testimonials2 .container {
+    padding: 80px;
+    position: relative;
+}
+
+.testimonial-image {
+    float: left;
+    width: 20%;
+}
+
+.testimonial-quote {
+    float: right;
+    width: 70%;
+    padding: 35px 10px;
+}
+
+/*========= Stamps Part ===========*/
+.stamps {
+    background: #f8f8f8;
+}
+
+.stamps img {
+    height: auto;
+    width: 100%;
+}
+
+.stamps .container {
+    padding: 50px 0;
+}
+
+/*==========  Clients Part ==========*/
+.clients {
+    background: url(../images/Layer_53.png);
+}
+
+.clients-row {
+    padding: 40px 0;
+}
+
+.clients-info {
+    float: left;
+    width: 50%;
+}
+
+.clients-image {
+    float: left;
+    width: 30%;
+}
+
+.clients-detail {
+    float: right;
+    width: 70%;
+    text-align: left;
+}
+
+.clients-info .dash-red {
+    margin: 10px 0;
+}
+
+/*========== Our Stories Part ==========*/
+.blog-container {
+    float: left;
+    width: 31.666666%;
+    margin-right: 30px;
+}
+
+.blog-container:last-of-type {
+    margin-right: 0;
+}
+
+.blog-container {
+    text-align: left;
+}
+
+.blog-container h2 a {
+    font-size: 0.875em;
+    font-weight: bold;
+    color: #333;
+    line-height: 30px;
+}
+
+.blog-container p {
+    font-size: 0.875em;
+    color: #777;
+    line-height: 20px;
+}
+
+.blog-container.blog-container hr {
+    margin: 18px 0;
+    opacity: 0.3;
+}
+
+.blog-numbers span {
+    padding: 0 20px 0 10px;
+    color: #777;
+    font-style: italic;
+    font-size: 0.875em;
+}
+
+/*========== Map Part ===========*/
+.map-section {
+    background: url(../images/Layer_59.png);
+}
+
+.white-overlay {
+    background: white;
+    opacity: 0.9;
+}
+
+.white-overlay img {
+    opacity: 1;
+}
+
+.map-section .container {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.map-section .map-title a {
+    color: #f38181;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 60px;
+}
+
+.map-section .dash-red {
+    height: 3px;
+    width: 60px;
+    margin: 0 auto;
+}
+
+/*======== Footer ========*/
+
+footer {
+    background: #f8f8f8;
+}
+
+.footer-top .container {
+    padding: 60px 0;
+}
+
+footer hr {
+    opacity: 0.3;
+}
+
+footer .logo {
+    color: #d7d7d7;
+    font-size: 2.875em;
+    width: 100%;
+}
+
+.footer-paragraph {
+    padding: 40px 0;
+    color: #999;
+    font-size: 0.875em;
+    line-height: 24px;
+}
+
+.follow-us {
+    font-size: 0.875em;
+    font-style: italic;
+    color: #999;
+}
+
+.social-links {
+    float: right;
+    width: 80%;
+}
+
+.social-links img {
+    float: left;
+    padding: 0 8px;
+}
+
+.subscribe {
+    width: 360px;
+    margin: 40px 0;
+}
+
+.input-sub {
+    width: 57%;
+    height: 40px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-right: 0;
+    padding: 0px 10px;
+}
+
+.subscribe-btn {
+    width: 36%;
+    padding: 12px 30px;
+    height: 40px;
+    background: #95e1d3;
+    border: 0;
+}
+
+.footer-left hr {
+    margin: 20px 0;
+}
+
+.footer-content {
+    padding-left: 35px;
+}
+
+.footer-headings {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.blog-info {
+    padding: 10px 0;
+}
+
+.blog-title {
+    padding: 2px 18px;
+    line-height: 18px;
+    font-size: 15px;
+}
+
+.blog-pub-date {
+    color: #999;
+    padding: 5px 18px;
+    line-height: 18px;
+    font-size: 0.75em;
+    font-style: italic;
+}
+
+.instagram {
+    padding: 20px 0;
+}
+
+.view-more a {
+    font-size: 0.75em;
+    font-style: italic;
+    color: #777;
+}
+
+
+/*======== Footer Bottom =========*/
+.footer-bottom-content {
+    text-align: center;
+    font-size: 0.875em;
+    font-weight: 600;
+    color: #333;
+    line-height: 60px;
+}
+
+.footer-bottom-content span {
+    color: #f38181;
+}
+
+@media only screen and (max-width: 800px) {
+    .home-bottom-nav {
+        display: none;
+    }
+
+    .main-text {
+        font-size: 6em;
+    }
+
+    .image-holder {
+        margin-right: 0;
+        width: 50%;
+    }
+
+    .image-holder:last-child {
+        display: none;
+    }
+
+    .work-row .work-cols:last-child {
+        display: none;
+    }
+
+    .work-cols {
+        width: 50%;
+    }
+
+    .service-type img {
+        padding-left: 15px;
+    }
+
+    .service-img {
+        float: none;
+        width: 100%;
+    }
+
+    .service-collapsible {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .left-gallery {
+        float: none;
+        width: 100%;
+    }
+
+    .right-gallery {
+        float: none;
+        width: 100%;
+    }
+
+    .testimonial-icon,
+    .testimonial-image {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .quote,
+    .testimonial-quote {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .testimonial-quote .dash-red {
+        margin: 20px auto;
+    }
+
+    .testimonial-image {
+        float: none;
+    }
+
+    .testimonial-quote {
+        float: none;
+    }
+
+    .blog-container {
+        float: left;
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    .blog-container:last-child {
+        display: none;
+    }
+
+    .footer-left {
+        float: none;
+        width: 100%;
+    }
+
+    .footer-content {
+        float: none;
+        width: 100%;
+    }
+
+    .footer-content:last-child {
+        display: none;
+    }
+
+    .blog-detail {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .logo {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    nav {
+        float: none;
+    }
+
+    nav ul li {
+        float: none;
+    }
+
+    nav ul li a {
+        line-height: 5em;
+    }
+}
