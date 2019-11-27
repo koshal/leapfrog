@@ -13,7 +13,7 @@
 
 .carousel-image-container {
   position: absolute;
-  transition: all 1s ease;
+  /* transition: all 1s ease; */
 }
 
 .carousel-image-container img {

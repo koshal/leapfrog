@@ -18,13 +18,15 @@ addDots();
 
 function addDots() {
   for (let i = 0; i < imageCount; i++) {
+    var dots = document.getElementsByClassName('dots');
     var dot = document.createElement("span");
     dot.classList.add("dots");
     dotContainer.appendChild(dot);
     dot.addEventListener("click", function () {
       currentImageIndex = i;
       slideImage(currentImageIndex);
-      // dots[currentImageIndex].classList.add('active');
+      dots[currentImageIndex].classList.add('active');
+      clearTimeout(timer);
     });
   }
 }
@@ -46,7 +48,7 @@ function playSlides() {
   dots[currentImageIndex].classList.add('active');
 
   currentImageIndex++;
-  setTimeout(playSlides, 3000);
+  var timer = setTimeout(playSlides, 3000);
 
 }
 
