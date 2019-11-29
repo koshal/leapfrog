@@ -1,134 +1,130 @@
-function Carousel(containerId) {
+var container = document.getElementById('carousel-container');
+var imageCarousel = document.getElementById('carousel-image-container');
+var images = document.getElementById('carousel-image-container').getElementsByTagName('img');
+var dotContainer = document.getElementById('dots-wrapper');
 
-  var indicatorWrapper;
-  var that = this;
+var currentImageIndex = 0;
+var imageCount = images.length;
+var imageWidth = container.offsetWidth;
+var timer;
 
-  this.currentImageIndex = 0;
-  this.width = 800;
-  this.height = 480;
-  this.containerId = containerId[0];
-
-  this.imagesWrapper = containerId[0].children;
-  this.images = this.imagesWrapper.item(0).children;
-  this.imageCount = this.images.length;
-
-  // this.images = Array.from(this.imagesWrapper.getElementsByTagName('img'));
-  this.func = function () {
-    // console.log(this.addDirection());
-  }
-
-  this.init = function () {
-    this.setStyle();
-    this.addDirection();
-    this.addIndicators();
-    this.activateIndicator(this.currentImageIndex);
-
-  }
-
-  this.addDirection = function () {
-    var moveLeft = document.createElement('div');
-    var moveRight = document.createElement('div');
-    moveLeft.classList.add('prev-img');
-    moveRight.classList.add('next-img');
-    this.containerId.appendChild(moveLeft);
-    this.containerId.appendChild(moveRight);
-    var left = document.createElement('i');
-    var right = document.createElement('i');
-    moveLeft.appendChild(left).className = "fas fa-chevron-left";
-    moveRight.appendChild(right).className = "fas fa-chevron-right";
-    // moveLeft.onclick = this.slideRight();
-    // moveLeft.addEventListener("click", slideRight(this.currentImageIndex));
-    // moveRight.addEventListener('click', this.slideLeft());
-
-    moveLeft.addEventListener('click', console.log("This is click event"));
-    moveRight.addEventListener('click', console.log("This is second click event"));
-    // }
-
-    // this.slideRight = function (c) {
-    // if (this.isCurrentImageLast()) {
-    //   this.currentImageIndex = 0;
-    //   this.slideImage(this.currentImageIndex);
-    //   this.activateIndicator(this.currentImageIndex);
-    // } 
-    // else {
-    //   this.currentImageIndex++;
-    //   this.slideImage(this.currentImageIndex);
-    //   this.activateIndicator(this.currentImageIndex);
-    // }
-  }
-
-  // this.slideLeft = function () {
-  //   if (this.isCurrentImageFirst()) {
-  //     this.currentImageIndex = this.imageCount - 1;
-  //     this.slideImage(this.currentImageIndex);
-  //     this.activateIndicator(this.currentImageIndex);
-  //   } else {
-  //       this.currentImageIndex--;
-  //     this.slideImage(this.currentImageIndex);
-  //     this.activateIndicator(this.currentImageIndex);
-  //   }
-  // }
-
-  this.slideImage = function (c) {
-    this.imagesWrapper[0].style.marginLeft = '-' + c * this.width + 'px';
-  }
-
-  this.addIndicators = function () {
-    indicatorWrapper = document.createElement('div');
-    indicatorWrapper.classList.add('dots-wrapper');
-    this.containerId.appendChild(indicatorWrapper);
-    this.addDots();
-  }
-
-  this.addDots = function () {
-    for (let i = 0; i < this.imageCount; i++) {
-      var dot = document.createElement("span");
-      dot.classList.add('dots');
-      indicatorWrapper.appendChild(dot);
-      dot.addEventListener("click", function () {
-        currentImageIndex = i;
-        that.slideImage(currentImageIndex);
-        that.activateIndicator(currentImageIndex)
-      });
-    }
-
-  }
-
-  this.setStyle = function () {
-    this.containerId.style.width = this.width + 'px';
-    this.containerId.style.height = this.height + 'px';
-    this.containerId.style.position = 'relative';
-    this.containerId.style.overflow = 'hidden';
-
-    this.imagesWrapper[0].style.width = this.imageCount * this.width + 'px';
-
-    for (let i = 0; i < this.imageCount; i++) {
-      this.images[i].style.float = 'left';
-    }
-  }
-
-  this.activateIndicator = function (c) {
-    var active = document.querySelector('.active');
-    var dots = Array.from(this.containerId.getElementsByClassName('dots'));
-    if (active != null) {
-      active.classList.remove('active');
-    }
-    dots[c].classList.add('active');
-    this.currentImageIndex = c;
-  }
-
-  this.isCurrentImageLast = function () {
-    return this.currentImageIndex == this.imageCount - 1;
-  }
-
-  this.isCurrentImageFirst = function () {
-    return this.currentImageIndex == 0;
-  }
+for (var i = 0; i < images.length; i++) {
+  images[i].width = imageWidth;
 }
 
-var container = document.getElementsByClassName('carousel-container');
+var carouselWidth = imageCount * imageWidth;
 
-var carousel = new Carousel(container);
-carousel.init();
-carousel.func();
+imageCarousel.style.width = carouselWidth + 'px';
+addDots();
+
+var dots = Array.from(document.getElementsByClassName('dots'));
+
+// startSlide();
+function startSlide() {
+  timer = setInterval(playSlides, 1500);
+}
+
+function stopSlide() {
+  clearInterval(timer);
+}
+
+function addDots() {
+  for (let i = 0; i < imageCount; i++) {
+    var dot = document.createElement("span");
+    dot.classList.add('dots');
+    dotContainer.appendChild(dot);
+    dot.addEventListener("click", function () {
+      currentImageIndex = i;
+      slideImage(currentImageIndex);
+      activateIndicator(currentImageIndex)
+    });
+  }
+
+}
+
+function activateIndicator(currentImageIndex) {
+  var active = document.querySelector('.active');
+  if (active != null) {
+    active.classList.remove('active');
+  }
+
+  dots[currentImageIndex].classList.add('active');
+}
+
+function playSlides() {
+  if (currentImageIndex + 1 > imageCount) {
+    currentImageIndex = 0;
+  }
+  slideImage(currentImageIndex);
+  activateIndicator(currentImageIndex);
+  currentImageIndex++;
+}
+
+function slideImage(c) {
+  imageCarousel.style.marginLeft = '-' + c * imageWidth + 'px';
+}
+
+function isCurrentImageLast() {
+  return currentImageIndex == imageCount - 1;
+}
+
+function isCurrentImageFirst() {
+  return currentImageIndex == 0;
+}
+
+document.getElementById('next-img').addEventListener('click', function () {
+  stopSlide();
+  if (isCurrentImageLast()) {
+    currentImageIndex = 0;
+    slideImage(currentImageIndex);
+    activateIndicator(currentImageIndex);
+    startSlide();
+  } else {
+    stopSlide();
+    currentImageIndex++;
+    slideImage(currentImageIndex);
+    activateIndicator(currentImageIndex);
+    startSlide()
+  }
+})
+
+document.getElementById('prev-img').addEventListener('click', function () {
+  stopSlide();
+  if (isCurrentImageFirst()) {
+    currentImageIndex = imageCount - 1;
+    slideImage(currentImageIndex);
+    activateIndicator(currentImageIndex);
+    startSlide();
+  } else {
+    stopSlide();
+    currentImageIndex--;
+    slideImage(currentImageIndex);
+    activateIndicator(currentImageIndex);
+    startSlide();
+  }
+})
+
+
+// document.addEventListener('keydown', function (event) {
+//   if (event.keyCode == 37) {
+//     if (isCurrentImageFirst()) {
+//       currentImageIndex = imageCount - 1;
+//       slideImage(currentImageIndex);
+//     } else {
+//       currentImageIndex--;
+//       slideImage(currentImageIndex);
+//     }
+//   }
+//   else if (event.keyCode == 39) {
+//     if (isCurrentImageLast()) {
+//       imageCarousel.style.left = 0;
+//       currentImageIndex = 0;
+//     } else {
+//       currentImageIndex++;
+//       slideImage(currentImageIndex);
+//     }
+//   }
+// });
+
+
 

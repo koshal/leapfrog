@@ -4,19 +4,7 @@
 }
 
 .carousel-container {
-  height: 480px;
-  width: 800px;
   margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-image-container {
-  transition: all .5s ease;
-}
-
-.carousel-image-container img {
-  float: left;
 }
 
 .prev-img {
@@ -53,6 +41,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
 
 .dots {
   height: 15px;
