@@ -3,7 +3,7 @@ function Box(parentElement) {
   this.y = 0;
   this.dx = 0;
   this.dy = 0;
-  this.speed = 2;
+  this.speed = 4;
   this.size = 30;
   this.width = this.size;
   this.height = this.size;
@@ -20,8 +20,6 @@ function Box(parentElement) {
 
     var box = document.createElement('div');
     box.appendChild(img);
-    box.style.height = this.height + 'px';
-    box.style.width = this.width + 'px';
     box.style.position = 'absolute';
     box.classList.add('box');
 
@@ -39,7 +37,7 @@ function Box(parentElement) {
     this.y = y;
   }
 
-  this.setDirection = function (dx, dy) {
+  this.setDirection = function () {
     this.dx = (Math.random() - 0.5) * this.speed * 2;
     this.dy = (Math.random() - 0.5) * this.speed * 2;
   }
@@ -98,8 +96,6 @@ function Game(parentElement, boxCount) {
     this.timer = setInterval(this.gameLoop.bind(this), 1000 / 60);
   }
 
-  // boxes.forEach(onclick)
-
   this.gameLoop = function () {
     for (var i = 0; i < this.boxCount; i++) {
       var box1 = boxes[i];
@@ -117,8 +113,6 @@ function Game(parentElement, boxCount) {
         this.checkBoxCollision(box1, box2);
       }
     }
-
-
   }
 
   this.checkBoxCollision = function (box1, box2) {
@@ -129,9 +123,9 @@ function Game(parentElement, boxCount) {
     if (deltaX <= 30 && deltaY <= 30) {
       // collision remove
       if (deltaX < deltaY) {
-        var tempvy = box1.dy
+        var tempdy = box1.dy
         box1.dy = box2.dy;
-        box2.dy = tempvy;
+        box2.dy = tempdy;
         if (box1.y < box2.y) {
           box1.y = box2.y - box1.size;
         }
@@ -140,9 +134,9 @@ function Game(parentElement, boxCount) {
         }
       }
       else {
-        var tempvx = box1.dx
+        var tempdx = box1.dx
         box1.dx = box2.dx;
-        box2.dx = tempvx;
+        box2.dx = tempdx;
         if (box1.x < box2.x) {
           box1.x = box2.x - box1.size;
         }
