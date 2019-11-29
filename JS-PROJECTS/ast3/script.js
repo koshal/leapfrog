@@ -3,7 +3,7 @@ function Box(parentElement) {
   this.y = 0;
   this.dx = 0;
   this.dy = 0;
-  this.speed = 1;
+  this.speed = 2;
   this.size = 30;
   this.width = this.size;
   this.height = this.size;
