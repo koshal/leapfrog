@@ -10,7 +10,6 @@ function Box(parentElement) {
   this.element = null;
   this.parentElement = parentElement;
   this.fps = 60;
-  var that = this;
   this.timer;
 
   this.init = function () {
@@ -57,7 +56,6 @@ function Box(parentElement) {
   this.move = function () {
     this.x += this.dx;
     this.y += this.dy;
-    // this.draw();
   }
 
   this.stop = function () {
@@ -97,8 +95,6 @@ function Game(parentElement, boxCount) {
       console.log('lol');
     }
 
-
-    // this.timer = setInterval(this.moveBoxes.bind(this), 200)
     this.timer = setInterval(this.gameLoop.bind(this), 1000 / 60);
   }
 
