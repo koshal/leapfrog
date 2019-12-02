@@ -12,17 +12,16 @@ function Box(parentElement) {
   this.fps = 60;
   this.timer;
 
-  this.init = function () {
+  this.init = function() {
     var img = document.createElement("img");
     img.src = "images/giphy.gif";
-    img.style.width = '100%';
-    img.style.objectFit = 'contain';
+    img.style.width = "100%";
+    img.style.objectFit = "contain";
 
-    var box = document.createElement('div');
+    var box = document.createElement("div");
     box.appendChild(img);
-    box.style.position = 'absolute';
-    box.classList.add('box');
-
+    box.style.position = "absolute";
+    box.classList.add("box");
 
     this.parentElement.appendChild(box);
     this.element = box;
@@ -30,37 +29,37 @@ function Box(parentElement) {
     this.draw();
 
     return this;
-  }
+  };
 
-  this.setPostion = function (x, y) {
+  this.setPostion = function(x, y) {
     this.x = x;
     this.y = y;
-  }
+  };
 
-  this.setDirection = function () {
+  this.setDirection = function() {
     this.dx = (Math.random() - 0.5) * this.speed * 2;
     this.dy = (Math.random() - 0.5) * this.speed * 2;
-  }
+  };
 
-  this.boxClicked = function () {
-    this.element.style.display = 'none';
-  }
+  this.boxClicked = function() {
+    this.element.style.display = "none";
+  };
 
-  this.draw = function () {
-    this.element.style.left = this.x + 'px';
-    this.element.style.top = this.y + 'px';
-  }
+  this.draw = function() {
+    this.element.style.left = this.x + "px";
+    this.element.style.top = this.y + "px";
+  };
 
-  this.move = function () {
+  this.move = function() {
     this.x += this.dx;
     this.y += this.dy;
-  }
+  };
 
-  this.stop = function () {
+  this.stop = function() {
     this.x += 0;
     this.y += 0;
     this.draw();
-  }
+  };
 }
 
 function getRandomArbitrary(min, max) {
@@ -72,12 +71,12 @@ function Game(parentElement, boxCount) {
   var MAX_WIDTH = 800;
   var MAX_HEIGHT = 500;
   this.parentElement = parentElement;
-  this.parentElement.style.width = MAX_WIDTH + 'px';
-  this.parentElement.style.height = MAX_HEIGHT + 'px';
-  this.parentElement.style.position = 'relative';
+  this.parentElement.style.width = MAX_WIDTH + "px";
+  this.parentElement.style.height = MAX_HEIGHT + "px";
+  this.parentElement.style.position = "relative";
   this.boxCount = boxCount || 10;
 
-  this.startGame = function () {
+  this.startGame = function() {
     for (var i = 0; i < this.boxCount; i++) {
       var box = new Box(parentElement).init();
       box.setPostion(
@@ -89,14 +88,14 @@ function Game(parentElement, boxCount) {
       boxes.push(box);
     }
 
-    this.boxClicked = function () {
-      console.log('lol');
-    }
+    this.boxClicked = function() {
+      console.log("lol");
+    };
 
     this.timer = setInterval(this.gameLoop.bind(this), 1000 / 60);
-  }
+  };
 
-  this.gameLoop = function () {
+  this.gameLoop = function() {
     for (var i = 0; i < this.boxCount; i++) {
       var box1 = boxes[i];
 
@@ -113,9 +112,9 @@ function Game(parentElement, boxCount) {
         this.checkBoxCollision(box1, box2);
       }
     }
-  }
+  };
 
-  this.checkBoxCollision = function (box1, box2) {
+  this.checkBoxCollision = function(box1, box2) {
     var deltaX = Math.abs(box1.x - box2.x);
     var deltaY = Math.abs(box1.y - box2.y);
 
@@ -123,31 +122,28 @@ function Game(parentElement, boxCount) {
     if (deltaX <= 30 && deltaY <= 30) {
       // collision remove
       if (deltaX < deltaY) {
-        var tempdy = box1.dy
+        var tempdy = box1.dy;
         box1.dy = box2.dy;
         box2.dy = tempdy;
         if (box1.y < box2.y) {
           box1.y = box2.y - box1.size;
-        }
-        else {
+        } else {
           box1.y = box2.y + box1.size;
         }
-      }
-      else {
-        var tempdx = box1.dx
+      } else {
+        var tempdx = box1.dx;
         box1.dx = box2.dx;
         box2.dx = tempdx;
         if (box1.x < box2.x) {
           box1.x = box2.x - box1.size;
-        }
-        else {
+        } else {
           box1.x = box2.x + box1.size;
         }
       }
     }
-  }
+  };
 
-  this.checkWallCollision = function (box) {
+  this.checkWallCollision = function(box) {
     if (box.x <= 0 || box.x + box.width >= MAX_WIDTH) {
       box.dx *= -1;
       box.x = box.x <= 0 ? 0 : MAX_WIDTH - box.size;
@@ -157,8 +153,8 @@ function Game(parentElement, boxCount) {
       box.dy *= -1;
       box.y = box.y <= 0 ? 0 : MAX_HEIGHT - box.size;
     }
-  }
+  };
 }
 
-var parentElement = document.getElementById('app');
+var parentElement = document.getElementById("app");
 new Game(parentElement, 10).startGame();
