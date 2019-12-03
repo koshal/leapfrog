@@ -5,18 +5,17 @@ function Box(parentElement) {
   this.dy = 0;
   this.speed = 4;
   this.size = 30;
-  this.width = this.size;
-  this.height = this.size;
+  this.width = 30;
+  this.height = 30;
   this.element = null;
   this.parentElement = parentElement;
-  this.fps = 60;
   this.timer;
 
   this.init = function() {
     var img = document.createElement("img");
     img.src = "images/giphy.gif";
     img.style.width = "100%";
-    img.style.objectFit = "contain";
+    // img.style.objectFit = "contain";
 
     var box = document.createElement("div");
     box.appendChild(img);
@@ -89,7 +88,7 @@ function Game(parentElement, boxCount) {
     }
 
     this.boxClicked = function() {
-      console.log("lol");
+      // console.log("lol");
     };
 
     this.timer = setInterval(this.gameLoop.bind(this), 1000 / 60);
