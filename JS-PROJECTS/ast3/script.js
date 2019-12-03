@@ -3,22 +3,26 @@ function Box(parentElement) {
   this.y = 0;
   this.dx = 0;
   this.dy = 0;
-  this.speed = 4;
+  this.speed = 1;
   this.size = 30;
-  this.width = 30;
-  this.height = 30;
+  this.width = this.size;
+  this.height = this.size;
   this.element = null;
   this.parentElement = parentElement;
+  this.fps = 60;
+  var that = this;
   this.timer;
 
   this.init = function() {
     var img = document.createElement("img");
     img.src = "images/giphy.gif";
     img.style.width = "100%";
-    // img.style.objectFit = "contain";
+    img.style.objectFit = "contain";
 
     var box = document.createElement("div");
     box.appendChild(img);
+    box.style.height = this.height + "px";
+    box.style.width = this.width + "px";
     box.style.position = "absolute";
     box.classList.add("box");
 
@@ -52,6 +56,7 @@ function Box(parentElement) {
   this.move = function() {
     this.x += this.dx;
     this.y += this.dy;
+    // this.draw();
   };
 
   this.stop = function() {
@@ -88,11 +93,14 @@ function Game(parentElement, boxCount) {
     }
 
     this.boxClicked = function() {
-      // console.log("lol");
+      console.log("lol");
     };
 
+    // this.timer = setInterval(this.moveBoxes.bind(this), 200)
     this.timer = setInterval(this.gameLoop.bind(this), 1000 / 60);
   };
+
+  // boxes.forEach(onclick)
 
   this.gameLoop = function() {
     for (var i = 0; i < this.boxCount; i++) {
@@ -121,18 +129,18 @@ function Game(parentElement, boxCount) {
     if (deltaX <= 30 && deltaY <= 30) {
       // collision remove
       if (deltaX < deltaY) {
-        var tempdy = box1.dy;
+        var tempvy = box1.dy;
         box1.dy = box2.dy;
-        box2.dy = tempdy;
+        box2.dy = tempvy;
         if (box1.y < box2.y) {
           box1.y = box2.y - box1.size;
         } else {
           box1.y = box2.y + box1.size;
         }
       } else {
-        var tempdx = box1.dx;
+        var tempvx = box1.dx;
         box1.dx = box2.dx;
-        box2.dx = tempdx;
+        box2.dx = tempvx;
         if (box1.x < box2.x) {
           box1.x = box2.x - box1.size;
         } else {
