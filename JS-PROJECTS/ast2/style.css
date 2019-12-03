@@ -5,6 +5,7 @@
 
 .carousel-container {
   margin: 0 auto;
+  transition: all 0.2;
 }
 
 .prev-img {
@@ -41,7 +42,6 @@
   left: 50%;
   transform: translateX(-50%);
 }
-
 
 .dots {
   height: 15px;
