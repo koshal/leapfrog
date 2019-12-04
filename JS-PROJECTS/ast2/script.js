@@ -146,4 +146,5 @@ var container = document.getElementsByClassName("carousel-container");
 
 var carousel = new Carousel(container);
 carousel.init();
+
 // carousel.func();

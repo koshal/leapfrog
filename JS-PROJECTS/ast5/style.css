@@ -1,4 +1,4 @@
-canvas {
-  border: 1px black solid;
-  margin: 0 auto;
+* {
+  margin: 0;
+  padding: 0;
 }

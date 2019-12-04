@@ -3,7 +3,7 @@ function Box(parentElement) {
   this.y = 0;
   this.dx = 0;
   this.dy = 0;
-  this.speed = 1;
+  this.speed = 5;
   this.size = 30;
   this.width = this.size;
   this.height = this.size;
@@ -164,4 +164,4 @@ function Game(parentElement, boxCount) {
 }
 
 var parentElement = document.getElementById("app");
-new Game(parentElement, 10).startGame();
+new Game(parentElement, 50).startGame();

@@ -497,16 +497,16 @@ function Game(width, height, parentElement, parentClass) {
       "keyup",
       function(event) {
         if (
-          (event.code === "ArrowRight" || event.code === "KeyD") &&
+          (event.keyCode === 39 || event.keyCode === 68) &&
           !this.racerClass.moving
         ) {
           that.racerClass.moveRight();
         } else if (
-          (event.code === "ArrowLeft" || event.code === "KeyA") &&
+          (event.keyCode === 37 || event.keyCode === 65) &&
           !this.racerClass.moving
         ) {
           that.racerClass.moveLeft();
-        } else if (event.code === "ArrowUp" || event.code === "KeyW") {
+        } else if (event.keyCode === 38 || event.keyCode === 87) {
           if (
             this.racerClass.bulletLeft > 0 &&
             !this.racerClass.bulletShooting
