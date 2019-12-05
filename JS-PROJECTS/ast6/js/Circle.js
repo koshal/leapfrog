@@ -1,7 +1,7 @@
 function Circle(context, isFaded) {
   this.context = context;
   this.radius = 0;
-  this.radiusAmp = 14;
+  this.radiusAmp = 15;
   this.isFaded = isFaded;
   this.point = {
     x: 100,
@@ -11,12 +11,12 @@ function Circle(context, isFaded) {
   this.currentX = 0;
   this.currentY = 100;
   this.angle = 180;
-  this.changes = 50;
-  this.omega = 2;
+  this.changes = 80;
+  this.omega = 3;
 
   this.drawCircle = function() {
     this.context.beginPath();
-    this.context.fillStyle = "#fff";
+    this.context.fillStyle = "#fcae78";
     this.context.arc(this.point.x, this.point.y, this.radius, 0, 2 * Math.PI);
     this.context.closePath();
     this.context.fill();
@@ -30,7 +30,7 @@ function Circle(context, isFaded) {
       tempX = (this.omega * this.currentX * Math.PI) / this.angle;
       console.log(tempX);
 
-      if (this.isFaded == false) {
+      if (!this.isFaded) {
         this.point.y = this.changes * Math.sin(tempX) + this.currentY;
         this.radius =
           (this.radiusAmp / 2) * Math.cos(tempX) + this.radiusAmp / 2;

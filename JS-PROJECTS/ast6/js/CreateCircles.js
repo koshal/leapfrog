@@ -28,19 +28,16 @@ function CreateCircles(context, rows, cols) {
 
     for (let i = 0; i < this.rows; i++) {
       currentY += this.gap;
-
       let currentX = 0;
       let phaseIncrement = 6;
       let currentPhase = 0;
 
       for (let j = 0; j < this.cols; j++) {
         let circle = new Circle(this.context, isOutofContext);
-
         circle.point.x = currentX += this.gap;
         circle.point.y = currentY;
         circle.currentX = currentPhase += phaseIncrement;
         circle.currentY = currentY;
-
         this.circles.push(circle);
       }
     }
