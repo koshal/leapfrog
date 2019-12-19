@@ -1,3 +1,51 @@
 .main-wrapper {
     margin: 0 auto;
+    max-width: 900px;
+}
+
+.pads {
+    display: flex;
+}
+
+.drums,
+.bass,
+.sounds {
+    display: flex;
+    width: 30.33%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+[class^="drum"],
+[class^="sound"],
+[class^="bass"],
+.addnew {
+    background: #fff;
+    margin: 5px;
+    width: 30%;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.addnew {
+    background: rgb(85, 85, 85);
+}
+
+
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
 }

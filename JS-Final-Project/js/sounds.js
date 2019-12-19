@@ -1,0 +1,41 @@
+let samples = [
+  './assets/samples/drum1.ogg',
+  './assets/samples/drum2.ogg',
+  './assets/samples/drum3.ogg',
+  './assets/samples/drum4.ogg',
+  './assets/samples/drum5.ogg',
+  './assets/samples/drum6.ogg',
+  './assets/samples/bass1.ogg',
+  './assets/samples/bass2.ogg',
+  './assets/samples/bass3.ogg',
+  './assets/samples/bass4.ogg',
+  './assets/samples/bass5.ogg',
+  './assets/samples/bass6.ogg',
+  './assets/samples/sound1.ogg',
+  './assets/samples/sound2.ogg',
+  './assets/samples/sound3.ogg',
+  './assets/samples/sound4.ogg',
+  './assets/samples/sound5.ogg',
+  './assets/samples/sound6.ogg'
+];
+
+let samplesObject = {
+  drum1: './assets/samples/drum1.ogg',
+  drum2: './assets/samples/drum2.ogg',
+  drum3: './assets/samples/drum3.ogg',
+  drum4: './assets/samples/drum4.ogg',
+  drum5: './assets/samples/drum5.ogg',
+  drum6: './assets/samples/drum6.ogg',
+  bass1: './assets/samples/bass1.ogg',
+  bass2: './assets/samples/bass2.ogg',
+  bass3: './assets/samples/bass3.ogg',
+  bass4: './assets/samples/bass4.ogg',
+  bass5: './assets/samples/bass5.ogg',
+  bass6: './assets/samples/bass6.ogg',
+  sound1: './assets/samples/sound1.ogg',
+  sound2: './assets/samples/sound2.ogg',
+  sound3: './assets/samples/sound3.ogg',
+  sound4: './assets/samples/sound4.ogg',
+  sound5: './assets/samples/sound5.ogg',
+  sound6: './assets/samples/sound6.ogg'
+};

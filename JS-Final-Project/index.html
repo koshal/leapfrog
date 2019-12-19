@@ -13,14 +13,49 @@
 </head>
 
 <body>
-    <div class="main-wrapper">
-        <div class="drums">
-            <div class="drum1">Drum1</div>
+    <div class="main-wrapper clearfix">
+        <div class="pads">
+            <div class="drums">
+                <div class="drum1" id="drum1">Drum1</div>
+                <div class="drum2" id="drum2">Drum2</div>
+                <div class="drum3" id="drum3">Drum3</div>
+                <div class="drum4" id="drum4">Drum4</div>
+                <div class="drum5" id="drum5">Drum5</div>
+                <div class="drum6" id="drum6">Drum6</div>
+                <div class="addnew"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="bass">
+                <div class="bass1" id="bass1">Bass1</div>
+                <div class="bass2" id="bass2">Bass2</div>
+                <div class="bass3" id="bass3">Bass3</div>
+                <div class="bass4" id="bass4">Bass4</div>
+                <div class="bass5" id="bass5">Bass5</div>
+                <div class="bass6" id="bass6">Bass6</div>
+            </div>
+            <div class="sounds">
+                <div class="sound1" id="sound1">Sound1</div>
+                <div class="sound2" id="sound2">Sound2</div>
+                <div class="sound3" id="sound3">Sound3</div>
+                <div class="sound4" id="sound4">Sound4</div>
+                <div class="sound5" id="sound5">Sound5</div>
+                <div class="sound6" id="sound6">Sound6</div>
+            </div>
         </div>
-        <div class="bass"></div>
-        <div class="sounds"></div>
+        <div class="controls">
+            <button class="pausePlayBtn">Play/Pause</button>
+            <button class="stopBtn">Stop</button>
+            <p>Current context time: No context exists.</p>
+        </div>
     </div>
 
+    <div class="loopProgress"></div>
+
+
+    <script src="https://kit.fontawesome.com/3e2bbd89d3.js" crossorigin="anonymous"></script>
+
+    <script src="js/sounds.js"></script>
+    <script src="js/BufferLoader.js"></script>
+    <!-- <script src="js/Sound.js"></script> -->
     <script src="js/main.js"></script>
 </body>
 

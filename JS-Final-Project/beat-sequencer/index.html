@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>sequencer</title>
+</head>
+
+<body>
+    <div id="sequencer-wrapper">
+        <table>
+            <tr id="hitom">
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+                <td class="step" data-sound="hitom"></td>
+            </tr>
+            <tr id="clhat">
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+                <td class="step" data-sound="clhat"></td>
+            </tr>
+            <tr id="sn">
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+                <td class="step" data-sound="sn"></td>
+            </tr>
+            <tr id="bd">
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+                <td class="step" data-sound="bd"></td>
+            </tr>
+        </table>
+        <div id='bpm-display'></div>
+    </div>
+    <div id="controls-wrapper">
+        <button id="play-btn">play/stop</button><br>
+        <label for="bpm-slider">bpm:</label><input id="bpm-slider" type="range" min="40" max="200" step="1"
+            value="120" />
+    </div>
+    <!-- <script src="sequencer.js"></script> -->
+    <script src="BuferLoader.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
